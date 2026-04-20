@@ -92,22 +92,10 @@ export const rnacentralCatalog: ApiCatalog = {
                 { name: "accession", type: "string", required: true, description: "Source-database accession." },
             ],
         },
-        {
-            method: "GET",
-            path: "/organisms/",
-            summary: "List organisms in RNAcentral.",
-            category: "metadata",
-            queryParams: [
-                { name: "page", type: "number", required: false, description: "Page number." },
-                { name: "page_size", type: "number", required: false, description: "Page size." },
-            ],
-        },
-        {
-            method: "GET",
-            path: "/expert-databases/",
-            summary: "List expert databases (curated source databases contributing to RNAcentral).",
-            category: "metadata",
-        },
+        // NOTE: /organisms/ and /expert-databases/ were removed from the
+        // catalog on 2026-04-17 — upstream returned HTTP 404. RNAcentral's
+        // taxonomy and source-database metadata is now expressed through
+        // /rna/{urs}/xrefs/ and the accession endpoints.
         {
             method: "GET",
             path: "/rna/{urs}/go-annotations/{taxid}/",
