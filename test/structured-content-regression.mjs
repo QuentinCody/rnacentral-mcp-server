@@ -38,8 +38,20 @@ console.log(`${BLUE}🧪 RNAcentral Structured Content Regression Tests${RESET}`
 
 const toolExpectations = [
   {
-    path: 'src/tools/search.ts',
-    required: ['createCodeModeResponse', 'createCodeModeError'],
+    path: 'src/tools/code-mode.ts',
+    required: ['createSearchTool', 'createExecuteTool', 'rnacentralCatalog'],
+  },
+  {
+    path: 'src/tools/query-data.ts',
+    required: ['createQueryDataHandler', 'rnacentral_query_data', 'RNACENTRAL_DATA_DO'],
+  },
+  {
+    path: 'src/tools/get-schema.ts',
+    required: ['createGetSchemaHandler', 'rnacentral_get_schema', 'RNACENTRAL_DATA_DO'],
+  },
+  {
+    path: 'src/spec/catalog.ts',
+    required: ['rnacentralCatalog', 'rnacentral.org/api/v1'],
   },
 ];
 
