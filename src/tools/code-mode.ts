@@ -20,6 +20,8 @@ export function registerCodeMode(server: McpServer, env: CodeModeEnv): void {
 
     const executeTool = createExecuteTool({
         prefix: "rnacentral",
+        // Verifiable provenance: rnacentral_execute results carry a _meta.citation.
+        source: { id: "rnacentral", name: "RNAcentral", url: "https://rnacentral.org", license: "CC0 1.0" },
         catalog: rnacentralCatalog,
         apiFetch,
         doNamespace: env.RNACENTRAL_DATA_DO,
