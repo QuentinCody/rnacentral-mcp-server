@@ -2,7 +2,7 @@
 
 MCP server wrapping the [RNAcentral API](https://rnacentral.org/help/api) — EMBL-EBI's unified database of non-coding RNA sequences from 40+ expert databases (miRBase, Rfam, Ensembl, snoDB, etc.).
 
-Runs on Cloudflare Workers. Exposes four Code Mode tools (`rnacentral_search`, `rnacentral_execute`, `rnacentral_query_data`, `rnacentral_get_schema`) plus a convenience `rnacentral_lookup`.
+Runs on Cloudflare Workers. Exposes four tools: Code Mode (`rnacentral_search`, `rnacentral_execute`) plus staging (`rnacentral_query_data`, `rnacentral_get_schema`).
 
 - Upstream docs: https://rnacentral.org/help/api
 - Base URL: `https://rnacentral.org/api/v1`
