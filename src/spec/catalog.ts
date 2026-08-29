@@ -11,7 +11,7 @@ export const rnacentralCatalog: ApiCatalog = {
     baseUrl: "https://rnacentral.org/api/v1",
     version: "v1",
     auth: "none",
-    endpointCount: 10,
+    endpointCount: 8,
     notes:
         "- RNAcentral record/collection paths require a TRAILING SLASH; omitting it returns 301 redirects.\n" +
         "- URS identifiers look like `URS0000000001` or `URS0000000001_9606` (with taxid).\n" +
